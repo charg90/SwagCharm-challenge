@@ -133,7 +133,7 @@ const ProductCartDetail = ({
           )}
         </Box>
       </Grid>
-      <Grid item>
+      <Grid item p={2}>
         <Typography
           fontWeight="700"
           fontSize="16px"

@@ -26,7 +26,13 @@ const DrawerMobile = () => {
 
   return (
     <>
-      <Box display="flex" padding={1}>
+      <Box
+        display="flex"
+        sx={{
+          display: { xs: "flex", md: "none" },
+        }}
+        p={1}
+      >
         <Button
           onClick={() => setOpen(!open)}
           sx={{
@@ -42,7 +48,6 @@ const DrawerMobile = () => {
             borderRadius: "50px",
             width: "100%",
             paddingX: "10px",
-            maxWidth: "628px",
           }}
         >
           <SearchIcon />

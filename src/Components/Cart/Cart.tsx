@@ -13,7 +13,7 @@ const Cart = () => {
 
   return (
     <Grid container gap={4}>
-      <Grid container item width="1056px" alignItems="center" mt={2}>
+      <Grid container item width="1056px" mt={2}>
         <Typography fontWeight="700" fontSize="24px">
           Your Cart{" "}
         </Typography>
@@ -24,7 +24,6 @@ const Cart = () => {
               container
               display="flex"
               justifyContent="space-between"
-              alignItems="center"
               key={item.id}
             >
               <ProductCartDetail {...item} />
@@ -39,7 +38,7 @@ const Cart = () => {
         flexDirection="column"
         width="336px"
         gap={2}
-        mt={2}
+        p={2}
       >
         <Typography fontWeight="700" fontSize="24px">
           Order Summary
