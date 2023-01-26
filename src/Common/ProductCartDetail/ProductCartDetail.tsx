@@ -1,9 +1,22 @@
-import { Box, Grid, List, ListItem, Typography } from "@mui/material";
-import React from "react";
+import {
+  Box,
+  FormControl,
+  Grid,
+  InputLabel,
+  List,
+  ListItem,
+  MenuItem,
+  NativeSelect,
+  Select,
+  Typography,
+} from "@mui/material";
+import React, { ChangeEvent } from "react";
 import { CartHelper } from "../../helper/CartHelper";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { CartItem } from "../../Models/CartItems";
-
+import { useDispatch } from "react-redux";
+import { deleteCart, updateQuantity } from "../../Store/Features/cart";
+import { useAppDispatch } from "../../Store/store";
 const ProductCartDetail = ({
   id,
   title,
@@ -13,6 +26,12 @@ const ProductCartDetail = ({
   subtItems3,
   price,
 }: CartItem) => {
+  const dispatch = useAppDispatch();
+  const handleSelect = (e: ChangeEvent<HTMLSelectElement>, id: number) => {
+    const quantity = parseInt(e.target.value);
+    dispatch(updateQuantity({ id: id, quantity: quantity }));
+  };
+
   return (
     <>
       <Grid item display="flex" gap={2} paddingY={2}>
@@ -21,9 +40,25 @@ const ProductCartDetail = ({
           <Typography fontWeight="700" fontSize="18px" color="#091625">
             {title}
           </Typography>
-          <Typography fontWeight="600" fontSize="16px" color="#091625">
-            Quantity:{quantity}
-          </Typography>
+          <Box fontWeight="600" fontSize="16px" color="#091625">
+            Quantity:
+            <FormControl sx={{ mx: 1, minWidth: 10 }} size="small">
+              <NativeSelect
+                defaultValue={quantity}
+                // onChange={handleChange}
+                disableUnderline
+                inputProps={{ "aria-label": "Without label" }}
+                sx={{ border: 0, fontWeight: 700, fontSize: 16 }}
+                onChange={(e) => handleSelect(e, id)}
+              >
+                <option value={10}>10</option>
+                <option value={20}>20</option>
+                <option value={30}>30</option>
+                <option value={40}>40</option>
+                <option value={50}>50</option>
+              </NativeSelect>
+            </FormControl>
+          </Box>
           {subItems || subtItems2 || subtItems3 ? (
             <>
               <List
@@ -67,7 +102,12 @@ const ProductCartDetail = ({
               </Typography>
             </>
           ) : (
-            <Box display="flex" alignItems="center" gap={1}>
+            <Box
+              display="flex"
+              alignItems="center"
+              gap={1}
+              onClick={() => dispatch(deleteCart(id))}
+            >
               <DeleteIcon />
               <Typography fontWeight="600" fontSize="12px">
                 {" "}

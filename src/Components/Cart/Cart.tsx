@@ -8,12 +8,12 @@ import { RootState } from "../../Store/store";
 import sumPrices from "../../Utilis/sumPrices";
 
 const Cart = () => {
-  const cartItems = useSelector((state: RootState) => state.cart);
+  const cartItems = useSelector((state: RootState) => state.cart.cart);
   const totalAmount = sumPrices(cartItems);
 
   return (
     <Grid container gap={4}>
-      <Grid container item width="1056px" height="605px" alignItems="center">
+      <Grid container item width="1056px" alignItems="center" mt={2}>
         <Typography fontWeight="700" fontSize="24px">
           Your Cart{" "}
         </Typography>
@@ -24,6 +24,7 @@ const Cart = () => {
               container
               display="flex"
               justifyContent="space-between"
+              alignItems="center"
               key={item.id}
             >
               <ProductCartDetail {...item} />
