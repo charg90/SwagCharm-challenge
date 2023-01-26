@@ -13,7 +13,7 @@ import { company, help, infomation } from "../../helper/FooterHelper";
 
 const Footer = () => {
   return (
-    <Box bgcolor="#CED0D3" mt={2} padding={6}>
+    <Box bgcolor="#E6E8E9" mt={2} padding={6}>
       <Container maxWidth="xl">
         <Stack>
           <Grid container gap={22}>
@@ -24,6 +24,7 @@ const Footer = () => {
                 display="flex"
                 justifyContent="center"
                 alignItems="center"
+                bgcolor="#CED0D3"
               >
                 <Typography>Logo</Typography>
               </Box>

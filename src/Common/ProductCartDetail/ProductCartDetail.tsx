@@ -1,5 +1,6 @@
 import {
   Box,
+  Divider,
   FormControl,
   Grid,
   InputLabel,
@@ -97,9 +98,23 @@ const ProductCartDetail = ({
                   </Typography>
                 </ListItem>
               </List>
-              <Typography fontWeight="600" fontSize="12px">
-                edit | remove
-              </Typography>
+              <Box display="flex" gap={1}>
+                <Box>
+                  <Typography fontWeight="600" fontSize="12px">
+                    Edit pack
+                  </Typography>
+                </Box>
+                <Divider orientation="vertical" flexItem />
+                <Box
+                  component="span"
+                  sx={{ cursor: "pointer" }}
+                  onClick={() => dispatch(deleteCart(id))}
+                >
+                  <Typography fontWeight="600" fontSize="12px">
+                    remove
+                  </Typography>
+                </Box>
+              </Box>
             </>
           ) : (
             <Box
@@ -107,6 +122,7 @@ const ProductCartDetail = ({
               alignItems="center"
               gap={1}
               onClick={() => dispatch(deleteCart(id))}
+              sx={{ cursor: "pointer" }}
             >
               <DeleteIcon />
               <Typography fontWeight="600" fontSize="12px">
@@ -118,7 +134,12 @@ const ProductCartDetail = ({
         </Box>
       </Grid>
       <Grid item>
-        <Typography fontWeight="700" fontSize="16px" color="#091625">
+        <Typography
+          fontWeight="700"
+          fontSize="16px"
+          color="#091625"
+          align="right"
+        >
           {price.toLocaleString("en-US", {
             style: "currency",
             currency: "USD",

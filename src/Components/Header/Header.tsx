@@ -9,7 +9,11 @@ import Typography from "@mui/material/Typography";
 const Header: React.FC = () => {
   console.log(headerHelper);
   return (
-    <Box bgcolor="#CED0D3" height="64px">
+    <Box
+      bgcolor="#CED0D3"
+      height="64px"
+      sx={{ display: { xs: "none", md: "flex" } }}
+    >
       <Container maxWidth="xl">
         <Grid container gap={4}>
           {headerHelper.map((info) => (

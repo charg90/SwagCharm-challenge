@@ -1,24 +1,26 @@
-import {
-  AppBar,
-  Box,
-  Container,
-  Grid,
-  Icon,
-  Paper,
-  Toolbar,
-  Typography,
-} from "@mui/material";
+import { Badge, Box, Container, Grid, Paper, Typography } from "@mui/material";
 import { InputBase } from "@mui/material";
 import React from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 import Person4OutlinedIcon from "@mui/icons-material/Person4Outlined";
+import { RootState } from "../../Store/store";
+import { useSelector } from "react-redux";
+import DrawerMobile from "./DrawerMobiel";
 
 const NavBar: React.FC = () => {
+  const cartItems = useSelector((state: RootState) => state.cart.cart);
   return (
     <>
+      <Box>
+        <DrawerMobile />
+      </Box>
       <Box
-        sx={{ backgroundColor: "#091625", height: "88px" }}
+        sx={{
+          backgroundColor: "#091625",
+          height: "88px",
+          display: { xs: "none", md: "flex" },
+        }}
         display="flex"
         alignItems="center"
       >
@@ -86,7 +88,16 @@ const NavBar: React.FC = () => {
                 </Typography>
               </Box>
               <Box display="flex" alignItems="center" flexDirection="row">
-                <BusinessCenterIcon color="primary" />
+                <Badge
+                  badgeContent={cartItems.length}
+                  color="secondary"
+                  anchorOrigin={{
+                    vertical: "top",
+                    horizontal: "left",
+                  }}
+                >
+                  <BusinessCenterIcon color="primary" />
+                </Badge>
                 <Typography color="#fff" fontSize="15px" fontWeight="400">
                   Cart{" "}
                 </Typography>
