@@ -1,14 +1,6 @@
-export interface CartHelper {
-  id: number;
-  title: string;
-  quantity: number;
-  price: number;
-  subItems?: string;
-  subtItems2?: string;
-  subtItems3?: string;
-}
+import { CartItem } from "../Models/CartItems";
 
-export const CartHelper: CartHelper[] = [
+export const CartHelper: CartItem[] = [
   {
     id: 1,
     title: "My Christmas pack",

@@ -2,6 +2,7 @@ import { Box, Grid, List, ListItem, Typography } from "@mui/material";
 import React from "react";
 import { CartHelper } from "../../helper/CartHelper";
 import DeleteIcon from "@mui/icons-material/Delete";
+import { CartItem } from "../../Models/CartItems";
 
 const ProductCartDetail = ({
   id,
@@ -11,10 +12,10 @@ const ProductCartDetail = ({
   subtItems2,
   subtItems3,
   price,
-}: CartHelper) => {
+}: CartItem) => {
   return (
-    <Grid item container display="flex" justifyContent="space-between" key={id}>
-      <Grid item display="flex" gap={2}>
+    <>
+      <Grid item display="flex" gap={2} paddingY={2}>
         <Box width="120px" height="120px" bgcolor="#E6E8E9 "></Box>
         <Box display="flex" flexDirection="column">
           <Typography fontWeight="700" fontSize="18px" color="#091625">
@@ -78,13 +79,20 @@ const ProductCartDetail = ({
       </Grid>
       <Grid item>
         <Typography fontWeight="700" fontSize="16px" color="#091625">
-          ${price}
+          {price.toLocaleString("en-US", {
+            style: "currency",
+            currency: "USD",
+          })}
         </Typography>
         <Typography fontWeight="700" fontSize="16px" color="#091625">
-          Total:${quantity * price}
+          Total:
+          {(quantity * price).toLocaleString("en-US", {
+            style: "currency",
+            currency: "USD",
+          })}
         </Typography>
       </Grid>
-    </Grid>
+    </>
   );
 };
 
