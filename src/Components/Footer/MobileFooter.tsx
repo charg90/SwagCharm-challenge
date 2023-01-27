@@ -19,7 +19,7 @@ const MobileFooter = () => {
       <Accordion
         expanded={expanded === "panel1"}
         onChange={handleChange("panel1")}
-        sx={{ backgroundColor: "#E6E8E9" }}
+        sx={{ backgroundColor: "primary.dark10" }}
       >
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
@@ -43,7 +43,7 @@ const MobileFooter = () => {
       <Accordion
         expanded={expanded === "panel2"}
         onChange={handleChange("panel2")}
-        sx={{ backgroundColor: "#E6E8E9" }}
+        sx={{ backgroundColor: "primary.dark10" }}
       >
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
@@ -67,13 +67,13 @@ const MobileFooter = () => {
       <Accordion
         expanded={expanded === "panel3"}
         onChange={handleChange("panel3")}
-        sx={{ backgroundColor: "#E6E8E9" }}
+        sx={{ backgroundColor: "primary.dark10" }}
       >
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel3bh-content"
           id="panel3bh-header"
-          sx={{ backgroundColor: "#E6E8E9" }}
+          sx={{ backgroundColor: "primary.dark10" }}
         >
           <Typography
             sx={{ width: "33%", flexShrink: 0 }}

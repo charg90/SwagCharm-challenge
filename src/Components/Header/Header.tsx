@@ -10,7 +10,7 @@ const Header: React.FC = () => {
   console.log(headerHelper);
   return (
     <Box
-      bgcolor="#CED0D3"
+      bgcolor="primary.dark09"
       height="64px"
       sx={{ display: { xs: "none", md: "flex" } }}
     >
@@ -24,7 +24,11 @@ const Header: React.FC = () => {
               display="flex"
               alignItems="center"
             >
-              <Typography fontWeight="400" color="#535C67" fontSize="15px">
+              <Typography
+                fontWeight="400"
+                color="primary.dark04"
+                fontSize="15px"
+              >
                 {" "}
                 {info.title}
               </Typography>

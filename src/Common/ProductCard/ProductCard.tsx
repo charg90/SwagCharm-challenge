@@ -9,7 +9,7 @@ import { Box, Grid } from "@mui/material";
 const ProductCard = () => {
   return (
     <Card sx={{ width: "336px", height: "394px" }} elevation={0}>
-      <Box maxWidth="336px" height="336px" bgcolor="#CED0D3" />
+      <Box maxWidth="336px" height="336px" bgcolor="primary.dark09" />
       <CardContent sx={{ padding: "0px" }}>
         <Typography fontSize="16px" fontWeight="700">
           Unisex Short Sleeve T-Shirt
@@ -23,7 +23,7 @@ const ProductCard = () => {
             {" "}
             <Box
               component="span"
-              color=" #6B737C"
+              color=" primary.dark05"
               fontSize="14px"
               fontWeight="400"
             >

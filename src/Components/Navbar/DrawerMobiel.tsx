@@ -68,7 +68,7 @@ const DrawerMobile = () => {
         open={open}
         PaperProps={{
           sx: {
-            backgroundColor: "#091625",
+            backgroundColor: "primary.dark01",
             color: "#fff",
           },
         }}
@@ -80,7 +80,7 @@ const DrawerMobile = () => {
           </Button>
         </Box>
         <Box>
-          <Typography color="#848A92" fontWeight="400" align="center">
+          <Typography color="primary.dark06" fontWeight="400" align="center">
             {" "}
             Logo
           </Typography>

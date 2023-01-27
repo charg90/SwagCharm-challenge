@@ -36,12 +36,12 @@ const ProductCartDetail = ({
   return (
     <>
       <Grid item display="flex" gap={2} paddingY={2}>
-        <Box width="120px" height="120px" bgcolor="#E6E8E9 "></Box>
+        <Box width="120px" height="120px" bgcolor="primary.dark10"></Box>
         <Box display="flex" flexDirection="column">
-          <Typography fontWeight="700" fontSize="18px" color="#091625">
+          <Typography fontWeight="700" fontSize="18px" color="primary.dark01">
             {title}
           </Typography>
-          <Box fontWeight="600" fontSize="16px" color="#091625">
+          <Box fontWeight="600" fontSize="16px" color="primary.dark01">
             Quantity:
             <FormControl sx={{ mx: 1, minWidth: 10 }} size="small">
               <NativeSelect
@@ -74,7 +74,11 @@ const ProductCartDetail = ({
                     display: "list-item",
                   }}
                 >
-                  <Typography fontSize="14px" color="#091625" fontWeight="600">
+                  <Typography
+                    fontSize="14px"
+                    color="primary.dark01"
+                    fontWeight="600"
+                  >
                     {subItems}
                   </Typography>
                 </ListItem>
@@ -84,7 +88,11 @@ const ProductCartDetail = ({
                   }}
                 >
                   {" "}
-                  <Typography fontSize="14px" color="#091625" fontWeight="600">
+                  <Typography
+                    fontSize="14px"
+                    color="primary.dark01"
+                    fontWeight="600"
+                  >
                     {subtItems2}
                   </Typography>
                 </ListItem>
@@ -93,7 +101,11 @@ const ProductCartDetail = ({
                     display: "list-item",
                   }}
                 >
-                  <Typography fontSize="14px" color="#091625" fontWeight="600">
+                  <Typography
+                    fontSize="14px"
+                    color="primary.dark01"
+                    fontWeight="600"
+                  >
                     {subtItems3}
                   </Typography>
                 </ListItem>
@@ -137,7 +149,7 @@ const ProductCartDetail = ({
         <Typography
           fontWeight="700"
           fontSize="16px"
-          color="#091625"
+          color="primary.dark01"
           align="right"
         >
           {price.toLocaleString("en-US", {
@@ -145,7 +157,7 @@ const ProductCartDetail = ({
             currency: "USD",
           })}
         </Typography>
-        <Typography fontWeight="700" fontSize="16px" color="#091625">
+        <Typography fontWeight="700" fontSize="16px" color="primary.dark01">
           Total:
           {(quantity * price).toLocaleString("en-US", {
             style: "currency",

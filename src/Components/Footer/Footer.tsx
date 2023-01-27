@@ -14,7 +14,7 @@ import MobileFooter from "./MobileFooter";
 
 const Footer = () => {
   return (
-    <Box bgcolor="#E6E8E9" mt={2} padding={6}>
+    <Box bgcolor="primary.dark10" mt={2} padding={6}>
       <Container maxWidth="xl">
         <Stack>
           <Grid container gap={22}>
@@ -25,19 +25,27 @@ const Footer = () => {
                 display="flex"
                 justifyContent="center"
                 alignItems="center"
-                bgcolor="#CED0D3"
+                bgcolor="primary.dark09"
               >
                 <Typography>Logo</Typography>
               </Box>
               <Box width="264px" mt={2}>
-                <Typography color="#6B737C" fontSize="15px" fontWeight="400">
+                <Typography
+                  color="primary.dark05"
+                  fontSize="15px"
+                  fontWeight="400"
+                >
                   We sell custom products for all your needs. Packs and bulk
                   products that you will enjoy.
                 </Typography>
               </Box>
               <Box display="flex" mt={2}>
                 <CallIcon />
-                <Typography color=" #091625" fontWeight="600" fontSize="15px">
+                <Typography
+                  color=" primary.dark01"
+                  fontWeight="600"
+                  fontSize="15px"
+                >
                   +1-202-555-0129
                 </Typography>
               </Box>
@@ -65,7 +73,11 @@ const Footer = () => {
               </Box>
               {company.map((data) => (
                 <Box key={data.id} mt={2}>
-                  <Typography color="#3A4451" fontWeight="400" fontSize="15px">
+                  <Typography
+                    color="#primary.dark03"
+                    fontWeight="400"
+                    fontSize="15px"
+                  >
                     {data.title}
                   </Typography>
                 </Box>
@@ -79,7 +91,11 @@ const Footer = () => {
               </Box>
               {help.map((data) => (
                 <Box key={data.id} mt={2}>
-                  <Typography color="#3A4451" fontWeight="400" fontSize="15px">
+                  <Typography
+                    color="#primary.dark03"
+                    fontWeight="400"
+                    fontSize="15px"
+                  >
                     {data.title}
                   </Typography>
                 </Box>
@@ -93,7 +109,11 @@ const Footer = () => {
               </Box>
               {infomation.map((data) => (
                 <Box key={data.id} mt={2}>
-                  <Typography color="#3A4451" fontWeight="400" fontSize="15px">
+                  <Typography
+                    color="#primary.dark03"
+                    fontWeight="400"
+                    fontSize="15px"
+                  >
                     {data.title}
                   </Typography>
                 </Box>
@@ -107,7 +127,7 @@ const Footer = () => {
           width="100%"
           mt={15}
         >
-          <Typography fontWeight="400" fontSize="14px" color="#535C67">
+          <Typography fontWeight="400" fontSize="14px" color="primary.dark04">
             © 2022 Customer Products. All rights reserved.
           </Typography>
           <Stack flexDirection={{ xs: "column", sm: "row" }} gap={2}>
@@ -115,7 +135,7 @@ const Footer = () => {
               <Typography>
                 <Box
                   component="span"
-                  color=" #535C67"
+                  color=" primary.dark04"
                   fontSize="14px"
                   fontWeight="400"
                 >
@@ -134,7 +154,7 @@ const Footer = () => {
               <Typography>
                 <Box
                   component="span"
-                  color=" #535C67"
+                  color=" primary.dark04"
                   fontSize="14px"
                   fontWeight="400"
                 >

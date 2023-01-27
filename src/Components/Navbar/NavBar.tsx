@@ -17,12 +17,13 @@ const NavBar: React.FC = () => {
       </Box>
       <Box
         sx={{
-          backgroundColor: "#091625",
+          // backgroundColor: "primary.dark01",
           height: "88px",
           display: { xs: "none", md: "flex" },
         }}
         display="flex"
         alignItems="center"
+        bgcolor="primary.dark01"
       >
         <Container maxWidth="xl">
           <Grid container direction="row" alignItems="center">
@@ -30,13 +31,13 @@ const NavBar: React.FC = () => {
               item
               width="172px"
               height="48px"
-              bgcolor="#CED0D3"
+              bgcolor="primary.dark09"
               display="flex"
               alignItems="center"
               justifyContent="center"
             >
               <Box>
-                <Typography color="#848A92" fontWeight="400">
+                <Typography color="primary.dark06" fontWeight="400">
                   {" "}
                   Logo
                 </Typography>

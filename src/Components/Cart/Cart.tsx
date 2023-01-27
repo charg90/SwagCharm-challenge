@@ -45,21 +45,21 @@ const Cart = () => {
         </Typography>
         <Grid item>
           <Box display="flex" justifyContent="space-between" paddingY={2}>
-            <Typography fontWeight="700" fontSize="16px" color="#6B737C">
+            <Typography fontWeight="700" fontSize="16px" color="primary.dark05">
               number of items :
             </Typography>
 
-            <Typography fontWeight="700" fontSize="16px" color="#6B737C">
+            <Typography fontWeight="700" fontSize="16px" color="primary.dark05">
               {cartItems.length}
             </Typography>
           </Box>
           <Divider style={{ width: "100%" }} />
         </Grid>
         <Grid item display="flex" justifyContent="space-between">
-          <Typography color="#091625" fontWeight="600" fontSize="16px">
+          <Typography color="primary.dark01" fontWeight="600" fontSize="16px">
             total:
           </Typography>
-          <Typography color="#091625" fontWeight="600" fontSize="16px">
+          <Typography color="primary.dark01" fontWeight="600" fontSize="16px">
             {totalAmount.toLocaleString("en-US", {
               style: "currency",
               currency: "USD",
