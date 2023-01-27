@@ -10,6 +10,7 @@ import Twitter from "./../../assets/Twitter.svg";
 import Youtube from "./../../assets/Youtube.svg";
 import Eeuu from "./../../assets/eeuu.svg";
 import { company, help, infomation } from "../../helper/FooterHelper";
+import MobileFooter from "./MobileFooter";
 
 const Footer = () => {
   return (
@@ -48,7 +49,15 @@ const Footer = () => {
                 <img src={Youtube} />
               </Box>
             </Grid>
-            <Grid item>
+            <Box
+              sx={{
+                display: { xs: "block", md: "none" },
+                width: "100%",
+              }}
+            >
+              <MobileFooter />
+            </Box>
+            <Grid item sx={{ display: { xs: "none", md: "block" } }}>
               <Box>
                 <Typography fontWeight="700" fontSize="16px">
                   Our Company
@@ -62,7 +71,7 @@ const Footer = () => {
                 </Box>
               ))}
             </Grid>
-            <Grid item>
+            <Grid item sx={{ display: { xs: "none", md: "block" } }}>
               <Box>
                 <Typography fontWeight="700" fontSize="16px">
                   How can we help
@@ -76,7 +85,7 @@ const Footer = () => {
                 </Box>
               ))}
             </Grid>
-            <Grid item>
+            <Grid item sx={{ display: { xs: "none", md: "block" } }}>
               <Box>
                 <Typography fontWeight="700" fontSize="16px">
                   Information
@@ -93,7 +102,7 @@ const Footer = () => {
           </Grid>
         </Stack>
         <Stack
-          flexDirection="row"
+          flexDirection={{ xs: "column", md: "row" }}
           justifyContent="space-between"
           width="100%"
           mt={15}
@@ -101,7 +110,7 @@ const Footer = () => {
           <Typography fontWeight="400" fontSize="14px" color="#535C67">
             © 2022 Customer Products. All rights reserved.
           </Typography>
-          <Stack flexDirection="row" gap={2}>
+          <Stack flexDirection={{ xs: "column", sm: "row" }} gap={2}>
             <Box display="flex">
               <Typography>
                 <Box

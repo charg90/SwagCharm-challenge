@@ -31,7 +31,7 @@ const DrawerMobile = () => {
         sx={{
           display: { xs: "flex", md: "none" },
         }}
-        p={1}
+        p={2}
       >
         <Button
           onClick={() => setOpen(!open)}
