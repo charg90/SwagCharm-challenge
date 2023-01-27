@@ -50,11 +50,11 @@ const Footer = () => {
                 </Typography>
               </Box>
               <Box mt={2}>
-                <img src={Facebook} />
-                <img src={Twitter} />
-                <img src={Instagram} />
-                <img src={Linkedin} />
-                <img src={Youtube} />
+                <img src={Facebook} alt="facebook" />
+                <img src={Twitter} alt="twitter" />
+                <img src={Instagram} alt="instagram" />
+                <img src={Linkedin} alt="linkedin" />
+                <img src={Youtube} alt="youtube" />
               </Box>
             </Grid>
             <Box
