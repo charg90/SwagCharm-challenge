@@ -2,6 +2,14 @@
 
 Create a React app with Typescript following the  this Design
 https://www.figma.com/file/8HWzqJYZyM2GFRUAP7jlbB/React-Challenge?t=PyVJd3AHC2RH06xa-0
+<br />  
+Expected features:
+
+- Should be able to remove items from Cart.
+
+- Should be able to edit quantity of items.
+
+- Should be able to display updated total price based on items in cart.
 
 
 ## ⚡️ Features
