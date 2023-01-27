@@ -3,7 +3,6 @@ import {
   Divider,
   FormControl,
   Grid,
-  InputLabel,
   List,
   ListItem,
   MenuItem,
@@ -12,12 +11,15 @@ import {
   Typography,
 } from "@mui/material";
 import React, { ChangeEvent } from "react";
-import { CartHelper } from "../../helper/CartHelper";
+
 import DeleteIcon from "@mui/icons-material/Delete";
 import { CartItem } from "../../Models/CartItems";
-import { useDispatch } from "react-redux";
+
 import { deleteCart, updateQuantity } from "../../Store/Features/cart";
 import { useAppDispatch } from "../../Store/store";
+import Img4 from "./../../assets/image 4.svg";
+import Img9 from "./../../assets/image 9.svg";
+import Img10 from "./../../assets/image 10.svg";
 const ProductCartDetail = ({
   id,
   title,
@@ -36,7 +38,19 @@ const ProductCartDetail = ({
   return (
     <>
       <Grid item display="flex" gap={2} paddingY={2}>
-        <Box width="120px" height="120px" bgcolor="primary.dark10"></Box>
+        <Box width="120px" height="120px" bgcolor="primary.dark10">
+          <Box sx={{ position: "relative" }}>
+            <Box sx={{ position: "absolute", left: "40px", top: "15px" }}>
+              {subtItems2 && <img src={Img9} alt="product - item" />}
+            </Box>
+            <Box sx={{ position: "absolute", left: "30px", top: "55px" }}>
+              {subItems && <img src={Img4} alt="product - item" />}
+            </Box>
+            <Box sx={{ position: "absolute", left: "75px", top: "55px" }}>
+              {subtItems3 && <img src={Img10} alt="product - item" />}
+            </Box>
+          </Box>
+        </Box>
         <Box display="flex" flexDirection="column">
           <Typography fontWeight="700" fontSize="18px" color="primary.dark01">
             {title}
